@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-  "target": "ES2021",
-  "useDefineForClassFields": true,
-  "lib": ["DOM", "ES2021"],
-  "jsx": "react-jsx",
-  "module": "ESNext",
-  "moduleResolution": "bundler",
-  "strict": true,
-  "esModuleInterop": true,
-  "skipLibCheck": true,
-  "forceConsistentCasingInFileNames": true
+    "types": ["jest", "@testing-library/jest-dom"],
+    "target": "ES2021",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "ES2021"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src", "setupTests.ts"]
 }

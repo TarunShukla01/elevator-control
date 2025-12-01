@@ -1,16 +1,23 @@
-export type Direction = 'up' | 'down' | 'idle'
+export type Direction = "UP" | "DOWN" | "IDLE";
 
-export interface Elevator {
-id: number
-currentFloor: number
-targetFloors: number[] // queue (sorted depending on direction)
-direction: Direction
-busyUntil: number // timestamp (ms) until which elevator is busy (moving or doors)
+export interface FloorRequest {
+  id: number;
+  floor: number;
+  direction: Exclude<Direction, "IDLE">;
+  createdAt: number; // sim time in seconds
 }
 
-export interface Call {
-id: string
-floor: number
-direction: 'up' | 'down'
-createdAt: number
+export interface ElevatorStop {
+  floor: number;
+}
+
+export type ElevatorStatus = "IDLE" | "MOVING" | "LOADING";
+
+export interface ElevatorState {
+  id: number;
+  currentFloor: number;
+  direction: Direction;
+  status: ElevatorStatus;
+  timeToNextAction: number; // seconds left for current move/load
+  queue: ElevatorStop[];
 }
