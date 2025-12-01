@@ -19,3 +19,6 @@ http://localhost:5173
 
 Running Tests -
 npm test
+
+<img width="1434" height="807" alt="image" src="https://github.com/user-attachments/assets/fd2ab039-cf9d-4189-b5ee-cb1896b0b0ed" />
+
